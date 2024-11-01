@@ -1,0 +1,87 @@
+ExeStack:
+bool a ; int v ; a = true ; if (a) { then v = 2 else v = 3 } ; Print(v)     
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+int v ; a = true ; if (a) { then v = 2 else v = 3 } ; Print(v)    
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+int v ; a = true ; if (a) { then v = 2 else v = 3 } ; Print(v)    
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+a = true ; if (a) { then v = 2 else v = 3 } ; Print(v)   
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+a = true ; if (a) { then v = 2 else v = 3 } ; Print(v)   
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = true
+if (a) { then v = 2 else v = 3 } ; Print(v)  
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+if (a) { then v = 2 else v = 3 } ; Print(v)  
+SymTable:
+a -> true
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+if (a) { then v = 2 else v = 3 }
+Print(v) 
+SymTable:
+a -> true
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 2
+Print(v) 
+SymTable:
+a -> true
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+Print(v) 
+SymTable:
+a -> true
+v -> 2
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> true
+v -> 2
+Out:
+2
+FileTable:
+
