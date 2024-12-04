@@ -84,6 +84,14 @@ public class Controller {
             try {
                 //prgList.forEach(prg -> repo.logPrgStateExec(prg));
                 this.oneStepForAllPrg(prgList);
+
+                List<Integer> addressesInSymTables = this.getAllAddrFromSymTables();
+                for (PrgState p : this.repo.getPrgList()) {
+                    p.getHeap().setContent(safeGarbageCollector(
+                            addressesInSymTables,
+                            p.getHeap().getContent()));
+                }
+
                 prgList = this.removeCompletedPrg(this.repo.getPrgList());
             }
             catch (InterruptedException intE) {
@@ -97,14 +105,21 @@ public class Controller {
         this.repo.restartRepo(originalPrg);
     }
 
-    List<Integer> getAddrFromSymTable(Collection<IValue> symTableValues){
+    private List<Integer> getAllAddrFromSymTables() {
+        return this.repo.getPrgList().stream()
+                .flatMap(prg -> getAddrFromSymTable(prg.getSymTable().getContent().values()).stream())
+                .distinct()
+                .collect(Collectors.toList());
+    }
+
+    private List<Integer> getAddrFromSymTable(Collection<IValue> symTableValues){
         return symTableValues.stream()
                 .filter(v-> v instanceof RefValue)
                 .map(v-> {RefValue v1 = (RefValue)v; return v1.getAddress();})
                 .collect(Collectors.toList());
     }
 
-    List<Integer> getReferencedHeapAddresses(Map<Integer, IValue> heap) {
+    private List<Integer> getReferencedHeapAddresses(Map<Integer, IValue> heap) {
         return heap.values().stream()
                 .filter(value -> value instanceof RefValue)
                 .map(value -> ((RefValue) value).getAddress())
@@ -112,7 +127,7 @@ public class Controller {
                 .collect(Collectors.toList());
     }
 
-    Map<Integer, IValue> safeGarbageCollector(List<Integer> symTableAddr, Map<Integer, IValue> heap){
+    private Map<Integer, IValue> safeGarbageCollector(List<Integer> symTableAddr, Map<Integer, IValue> heap){
         List<Integer> heapReferencedAddresses = getReferencedHeapAddresses(heap);
 
         Set<Integer> allUsedAddresses = new HashSet<>(symTableAddr);
@@ -122,4 +137,6 @@ public class Controller {
                 .filter(e -> allUsedAddresses.contains(e.getKey()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
+
+
 }
