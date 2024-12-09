@@ -1,0 +1,196 @@
+# 8
+ExeStack:
+int a ; int b ; a = 2 + 3 * 5 ; b = a + 1 ; Print(b)     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+int a
+int b ; a = 2 + 3 * 5 ; b = a + 1 ; Print(b)    
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+int a
+int b ; a = 2 + 3 * 5 ; b = a + 1 ; Print(b)    
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+int b ; a = 2 + 3 * 5 ; b = a + 1 ; Print(b)    
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+int b ; a = 2 + 3 * 5 ; b = a + 1 ; Print(b)    
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+int b
+a = 2 + 3 * 5 ; b = a + 1 ; Print(b)   
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+int b
+a = 2 + 3 * 5 ; b = a + 1 ; Print(b)   
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+a = 2 + 3 * 5 ; b = a + 1 ; Print(b)   
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+a = 2 + 3 * 5 ; b = a + 1 ; Print(b)   
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+a = 2 + 3 * 5
+b = a + 1 ; Print(b)  
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+a = 2 + 3 * 5
+b = a + 1 ; Print(b)  
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+b = a + 1 ; Print(b)  
+SymTable:
+a -> 17
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+b = a + 1 ; Print(b)  
+SymTable:
+a -> 17
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+b = a + 1
+Print(b) 
+SymTable:
+a -> 17
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+b = a + 1
+Print(b) 
+SymTable:
+a -> 17
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+Print(b) 
+SymTable:
+a -> 17
+b -> 18
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+Print(b) 
+SymTable:
+a -> 17
+b -> 18
+Out:
+FileTable:
+Heap:
+
+
+# 8
+ExeStack:
+SymTable:
+a -> 17
+b -> 18
+Out:
+18
+FileTable:
+Heap:
+
+
