@@ -74,16 +74,16 @@ public class Repository implements IRepository {
         return this.prgList.getFirst().getOriginalProgram();
     }
 
-    public void restartRepo(IStmt originalProgram) {
-        this.prgList.clear();
-        IADTStack<IStmt> exeStack = new ADTStack<IStmt>();
-        exeStack.push(originalProgram);
-        IADTDictionary<String, IValue> symTable = new ADTDictionary<String, IValue>();
-        IADTList<IValue> output = new ADTList<IValue>();
-        IFileTable fileTable = new FileTable();
-        IHeap heap = new Heap();
-        IStmt originalPrgCopy = originalProgram.deepCopy();
-
-        PrgState initialPrg = new PrgState(exeStack, symTable, output, fileTable, heap, originalPrgCopy);
-    }
+//    public void restartRepo(IStmt originalProgram) {
+//        this.prgList.clear();
+//        IADTStack<IStmt> exeStack = new ADTStack<IStmt>();
+//        exeStack.push(originalProgram);
+//        IADTDictionary<String, IValue> symTable = new ADTDictionary<String, IValue>();
+//        IADTList<IValue> output = new ADTList<IValue>();
+//        IFileTable fileTable = new FileTable();
+//        IHeap heap = new Heap();
+//        IStmt originalPrgCopy = originalProgram.deepCopy();
+//
+//        PrgState initialPrg = new PrgState(exeStack, symTable, output, fileTable, heap, originalPrgCopy);
+//    }
 }

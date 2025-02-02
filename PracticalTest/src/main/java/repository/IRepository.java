@@ -12,6 +12,6 @@ public interface IRepository {
     void setPrgList(List<PrgState> list);
     PrgState getPrgById(int id);
     Set<Integer> getPrgIdSet();
-    void restartRepo(IStmt originalProgram);
+//    void restartRepo(IStmt originalProgram);
     IStmt getOriginalPrg();
 }
