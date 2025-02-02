@@ -18,7 +18,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
-//TODO: Check here
 
 public class Controller {
     private IRepository repo;
@@ -39,7 +38,9 @@ public class Controller {
         prgList.forEach(prg -> repo.logPrgStateExec(prg));
 
         List<Callable<PrgState>> callList = prgList.stream()
-                .map((PrgState p) -> (Callable<PrgState>)(() -> {return p.oneStep(); })).collect(Collectors.toList());
+                .filter(PrgState::isNotCompleted)
+                .map((PrgState p) -> (Callable<PrgState>)(() -> {return p.oneStep(); })).
+                collect(Collectors.toList());
 
         List<PrgState> newPrgList = executor.invokeAll(callList).stream()
                 .map(future -> {
@@ -64,7 +65,6 @@ public class Controller {
                     } catch (InterruptedException intE) {
                         System.out.println("Interruption Error: " + intE.getMessage() + "\n");
                     }
-
                     return null;
                 })
                 .filter(p -> p != null)
@@ -72,39 +72,47 @@ public class Controller {
 
         prgList.addAll(newPrgList);
 
-        //prgList.forEach(prg -> repo.logPrgStateExec(prg));
-        this.repo.setPrgList(prgList);
-    }
-
-
-    public void allStep() {
-        IStmt originalPrg = this.repo.getOriginalPrg();
-        List<PrgState> prgList = removeCompletedPrg(this.repo.getPrgList());
-
-        while(prgList.size() > 0) {
-            try {
-                //prgList.forEach(prg -> repo.logPrgStateExec(prg));
-                this.oneStepForAllPrg(prgList);
-
-                List<Integer> addressesInSymTables = this.getAllAddrFromSymTables();
-                for (PrgState p : this.repo.getPrgList()) {
-                    p.getHeap().setContent(safeGarbageCollector(
-                            addressesInSymTables,
-                            p.getHeap().getContent()));
-                }
-
-                prgList = this.removeCompletedPrg(this.repo.getPrgList());
-            }
-            catch (InterruptedException intE) {
-                System.out.println("Interruption Error " + intE.getMessage() + "\n");
-            }
+        List<Integer> addressesInSymTables = this.getAllAddrFromSymTables();
+        for (PrgState p : this.repo.getPrgList()) {
+            p.getHeap().setContent(safeGarbageCollector(
+                    addressesInSymTables,
+                    p.getHeap().getContent()));
         }
 
-        executor.shutdownNow();
+        //prgList.forEach(prg -> repo.logPrgStateExec(prg));
+        //prgList = this.removeCompletedPrg(this.repo.getPrgList());
         this.repo.setPrgList(prgList);
-
-        this.repo.restartRepo(originalPrg);
     }
+
+
+//    public void allStep() {
+//        IStmt originalPrg = this.repo.getOriginalPrg();
+//        List<PrgState> prgList = removeCompletedPrg(this.repo.getPrgList());
+//
+//        while(prgList.size() > 0) {
+//            try {
+//                //prgList.forEach(prg -> repo.logPrgStateExec(prg));
+//                this.oneStepForAllPrg(prgList);
+//
+//                List<Integer> addressesInSymTables = this.getAllAddrFromSymTables();
+//                for (PrgState p : this.repo.getPrgList()) {
+//                    p.getHeap().setContent(safeGarbageCollector(
+//                            addressesInSymTables,
+//                            p.getHeap().getContent()));
+//                }
+//
+//                prgList = this.removeCompletedPrg(this.repo.getPrgList());
+//            }
+//            catch (InterruptedException intE) {
+//                System.out.println("Interruption Error " + intE.getMessage() + "\n");
+//            }
+//        }
+//
+//        executor.shutdownNow();
+//        this.repo.setPrgList(prgList);
+//
+//        this.repo.restartRepo(originalPrg);
+//    }
 
     private List<Integer> getAllAddrFromSymTables() {
         return this.repo.getPrgList().stream()

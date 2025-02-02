@@ -1,7 +1,6 @@
 package model.adt.dictionary;
 
 import model.adt.ADTException;
-import view.commands.Command;
 
 import java.util.Map;
 import java.util.Set;
