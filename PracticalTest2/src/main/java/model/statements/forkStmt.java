@@ -6,10 +6,7 @@ import model.adt.dictionary.IADTDictionary;
 import model.adt.list.IADTList;
 import model.adt.stack.ADTStack;
 import model.adt.stack.IADTStack;
-import model.prgstate.Heap;
-import model.prgstate.IFileTable;
-import model.prgstate.IHeap;
-import model.prgstate.PrgState;
+import model.prgstate.*;
 import model.types.BoolType;
 import model.types.IType;
 import model.values.IValue;
@@ -40,10 +37,11 @@ public class forkStmt implements IStmt {
         }
 
         IHeap heap = state.getHeap();
+        ISemaphoreTable semTable = state.getSemaphoreTable();
         IFileTable fileTable = state.getFileTable();
         IADTList<IValue> output = state.getOutput();
 
-        PrgState newPrg = new PrgState(exeStack, symTableCopy, output, fileTable, heap, this.threadStmt);
+        PrgState newPrg = new PrgState(exeStack, symTableCopy, output, fileTable, heap, semTable, this.threadStmt);
 
         return newPrg;
     }

@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.util.Pair;
 import model.adt.dictionary.ADTDictionary;
 import model.adt.dictionary.IADTDictionary;
 import model.adt.list.ADTList;
@@ -18,6 +19,8 @@ import model.values.IValue;
 import model.values.StringValue;
 import repository.IRepository;
 import repository.Repository;
+
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class PrgWindowController {
@@ -27,12 +30,16 @@ public class PrgWindowController {
     private IADTList<IValue> output;
     private IFileTable fileTable;
     private Integer lastClickedId;
+    private ISemaphoreTable semaphoreTable;
 
     @FXML
     private Label nrPrgStates = new Label();
 
     @FXML
     private TableView<HeapEntry> heapTableView = new TableView<HeapEntry>();
+
+    @FXML
+    private TableView<SemTableEntry> semTableView = new TableView<SemTableEntry>();
 
     @FXML
     private ListView<String> outListView = new ListView<String>();
@@ -60,13 +67,15 @@ public class PrgWindowController {
         this.output = new ADTList<IValue>();
         this.fileTable = new FileTable();
         this.heap = new Heap();
+        this.semaphoreTable = new SemaphoreTable();
         IStmt originalPrg = program.deepCopy();
-        PrgState prg = new PrgState(exeStack, symTable, output, fileTable, heap, originalPrg);
+        PrgState prg = new PrgState(exeStack, symTable, output, fileTable, heap, semaphoreTable, originalPrg);
         this.repository = new Repository(prg, "log.txt");
         this.lastClickedId = prg.getPrgId();
         this.controller = new Controller(this.repository);
 
         this.setHeapTableView();
+        this.setSemaphoreTable();
         this.setOutListView();
         this.setFileTableListView();
         this.setPrgStateIdListView();
@@ -84,6 +93,7 @@ public class PrgWindowController {
         }
 
         this.setHeapTableView();
+        this.setSemaphoreTable();
         this.setOutListView();
         this.setFileTableListView();
         this.setPrgStateIdListView();
@@ -103,6 +113,24 @@ public class PrgWindowController {
             this.setSymTableTableView(prgState.getSymTable());
             this.setExeStackListView(prgState.getExeStack());
         }
+    }
+
+    private void setSemaphoreTable() {
+        ObservableList<SemTableEntry> semEntries = FXCollections.observableArrayList();
+
+        for (Map.Entry<Integer, Pair<Integer, ArrayList<Integer>>> entry : this.semaphoreTable.getContent().entrySet()) {
+            semEntries.add(new SemTableEntry(entry.getKey(), entry.getValue()));
+        }
+
+        this.semTableView.setItems(semEntries);
+
+        TableColumn<SemTableEntry, Integer> addressColumn = new TableColumn<>("Address");
+        addressColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getAddress()));
+
+        TableColumn<SemTableEntry, Pair<Integer, ArrayList<Integer>>> valueColumn = new TableColumn<>("Value");
+        valueColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getValue()));
+
+        semTableView.getColumns().setAll(addressColumn, valueColumn);
     }
 
     private void setHeapTableView() {

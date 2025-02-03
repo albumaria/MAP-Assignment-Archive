@@ -19,15 +19,17 @@ public class PrgState {
     private IADTList<IValue> output;
     private IFileTable fileTable;
     private IHeap heap;
+    private ISemaphoreTable semaphoreTable;
     private IStmt originalProgram;
 
-    public PrgState(IADTStack<IStmt> stack, IADTDictionary<String, IValue> stable, IADTList<IValue> out, IFileTable ftable, IHeap heap, IStmt prg) {
+    public PrgState(IADTStack<IStmt> stack, IADTDictionary<String, IValue> stable, IADTList<IValue> out, IFileTable ftable, IHeap heap, ISemaphoreTable semaphoreTable, IStmt prg) {
         this.prgId = idInc.getAndIncrement();
         this.exeStack = stack;
         this.symTable = stable;
         this.output = out;
         this.fileTable = ftable;
         this.heap = heap;
+        this.semaphoreTable = semaphoreTable;
         this.originalProgram = prg.deepCopy();
     }
 
@@ -49,6 +51,8 @@ public class PrgState {
         return this.heap;
     }
 
+    public ISemaphoreTable getSemaphoreTable() {return this.semaphoreTable; }
+
     public IStmt getOriginalProgram() {
         return this.originalProgram;
     }
@@ -66,6 +70,8 @@ public class PrgState {
     }
 
     public void setFileTable(IFileTable ftbl) { this.fileTable = ftbl; }
+
+    public void setSemaphoreTable(ISemaphoreTable stable) { this.semaphoreTable = stable; }
 
     public void setHeap(IHeap heap) { this.heap = heap;}
 
