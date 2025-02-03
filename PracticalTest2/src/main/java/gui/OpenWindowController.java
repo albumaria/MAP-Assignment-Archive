@@ -12,6 +12,7 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import model.*;
 import model.adt.dictionary.*;
+import model.prgstate.Heap;
 import model.statements.file_statements.CloseRFile;
 import model.statements.file_statements.OpenRFile;
 import model.statements.file_statements.ReadFile;
@@ -349,6 +350,67 @@ public class OpenWindowController {
         }
         catch (TypeCheckException tcE) {
             System.out.println("TypeCheckException: " + tcE + " - Eleventh program not added to the list");
+        }
+
+        IStmt ex12 = new CompStmt(
+                new VarDeclStmt("v1", new RefType(new IntType())),
+                new CompStmt(
+                        new VarDeclStmt("cnt", new IntType()),
+                        new CompStmt(
+                                new NewStmt("v1", new ValueExp(new IntValue(1))),
+                                new CompStmt(
+                                        new CreateSemStmt("cnt", new HeapReadExp(new VarExp("v1"))),
+                                        new CompStmt(
+                                                new forkStmt(
+                                                        new CompStmt(
+                                                                new AcquireStmt("cnt"),
+                                                                new CompStmt(
+                                                                        new HeapWriteStmt("v1", new ArithExp('*', new HeapReadExp(new VarExp("v1")), new ValueExp(new IntValue(10)))),
+                                                                        new CompStmt(
+                                                                                new PrintStmt(new HeapReadExp(new VarExp("v1"))),
+                                                                                new ReleaseStmt("cnt")
+                                                                        )
+                                                                )
+                                                        )
+                                                ),
+                                                new CompStmt(
+                                                        new forkStmt(
+                                                                new CompStmt(
+                                                                        new AcquireStmt("cnt"),
+                                                                        new CompStmt(
+                                                                                new HeapWriteStmt("v1", new ArithExp('*', new HeapReadExp(new VarExp("v1")), new ValueExp(new IntValue(10)))),
+                                                                                new CompStmt(
+                                                                                        new HeapWriteStmt("v1", new ArithExp('*', new HeapReadExp(new VarExp("v1")), new ValueExp(new IntValue(2)))),
+                                                                                        new CompStmt(
+                                                                                                new PrintStmt(new HeapReadExp(new VarExp("v1"))),
+                                                                                                new ReleaseStmt("cnt")
+                                                                                        )
+                                                                                )
+                                                                        )
+                                                                )
+                                                        ),
+                                                        new CompStmt(
+                                                                new AcquireStmt("cnt"),
+                                                                new CompStmt(
+                                                                        new PrintStmt(new ArithExp('-', new HeapReadExp(new VarExp("v1")), new ValueExp(new IntValue(1)))),
+                                                                        new ReleaseStmt("cnt")
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+
+        try {
+            IADTDictionary<String, IType> typeEnv12 = new ADTDictionary<String, IType>();
+            ex12.typeCheck(typeEnv12);
+            programs.add(ex12.toString());
+            this.allStmts.add(ex12);
+        }
+        catch (TypeCheckException tcE) {
+            System.out.println("TypeCheckException: " + tcE + " - Twelfth program not added to the list");
         }
 
         programListView.setItems(programs);
