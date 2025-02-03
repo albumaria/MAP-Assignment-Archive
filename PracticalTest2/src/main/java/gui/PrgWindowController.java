@@ -124,13 +124,16 @@ public class PrgWindowController {
 
         this.semTableView.setItems(semEntries);
 
-        TableColumn<SemTableEntry, Integer> addressColumn = new TableColumn<>("Address");
+        TableColumn<SemTableEntry, Integer> addressColumn = new TableColumn<>("Location");
         addressColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getAddress()));
 
-        TableColumn<SemTableEntry, Pair<Integer, ArrayList<Integer>>> valueColumn = new TableColumn<>("Value");
-        valueColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getValue()));
+        TableColumn<SemTableEntry, Integer> valueColumn = new TableColumn<>("Number");
+        valueColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getValue().getKey()));
 
-        semTableView.getColumns().setAll(addressColumn, valueColumn);
+        TableColumn<SemTableEntry, ArrayList<Integer>> listColumn = new TableColumn<>("List");
+        listColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getValue().getValue()));
+
+        semTableView.getColumns().setAll(addressColumn, valueColumn, listColumn);
     }
 
     private void setHeapTableView() {

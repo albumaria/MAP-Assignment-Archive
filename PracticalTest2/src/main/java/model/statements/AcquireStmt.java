@@ -4,7 +4,6 @@ import javafx.util.Pair;
 import model.TypeCheckException;
 import model.adt.dictionary.IADTDictionary;
 import model.adt.stack.IADTStack;
-import model.prgstate.IHeap;
 import model.prgstate.ISemaphoreTable;
 import model.prgstate.PrgState;
 import model.types.IType;
