@@ -1,5 +1,6 @@
 package gui;
 
+import com.sun.jdi.Value;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -302,6 +303,52 @@ public class OpenWindowController {
         }
         catch (TypeCheckException tcE) {
             System.out.println("TypeCheckException: " + tcE + " - Tenth program not added to the list");
+        }
+
+        IStmt ex11 = new CompStmt(
+                new VarDeclStmt("a", new IntType()),
+                new CompStmt(
+                        new VarDeclStmt("b", new IntType()),
+                        new CompStmt(
+                                new VarDeclStmt("c", new IntType()),
+                                new CompStmt(
+                                    new AssignStmt("a", new ValueExp(new IntValue(1))),
+                                    new CompStmt(
+                                            new AssignStmt("b", new ValueExp(new IntValue(2))),
+                                            new CompStmt(
+                                                    new AssignStmt("c", new ValueExp(new IntValue(5))),
+                                                    new CompStmt(
+                                                            new SwitchStmt(
+                                                                    new ArithExp('*', new VarExp("a"), new ValueExp(new IntValue(10))),
+                                                                    new ArithExp('*', new VarExp("b"), new VarExp("c")),
+                                                                    new ValueExp(new IntValue(10)),
+                                                                    new CompStmt(
+                                                                            new PrintStmt(new VarExp("a")),
+                                                                            new PrintStmt(new VarExp("b"))
+                                                                    ),
+                                                                    new CompStmt(
+                                                                            new PrintStmt(new ValueExp(new IntValue(100))),
+                                                                            new PrintStmt(new ValueExp(new IntValue(200)))
+                                                                    ),
+                                                                    new PrintStmt(new ValueExp(new IntValue(300)))
+                                                            ),
+                                                            new PrintStmt(new ValueExp(new IntValue(300)))
+                                                    )
+                                            )
+                                    )
+                                )
+                        )
+                )
+        );
+
+        try {
+            IADTDictionary<String, IType> typeEnv11 = new ADTDictionary<String, IType>();
+            ex11.typeCheck(typeEnv11);
+            programs.add(ex11.toString());
+            this.allStmts.add(ex11);
+        }
+        catch (TypeCheckException tcE) {
+            System.out.println("TypeCheckException: " + tcE + " - Eleventh program not added to the list");
         }
 
         programListView.setItems(programs);
