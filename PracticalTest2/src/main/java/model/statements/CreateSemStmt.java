@@ -52,7 +52,12 @@ public class CreateSemStmt implements IStmt {
     }
 
     public IADTDictionary<String, IType> typeCheck(IADTDictionary<String, IType> typeEnv) throws TypeCheckException {
-        //todo
+        IType varType = typeEnv.lookup(this.var);
+        IType expType = this.exp.typeCheck(typeEnv);
+
+        if (!(varType.equals(new IntType()) || expType.equals(new IntType()))){
+            throw new TypeCheckException("Variable and Expression of CreateSemStmt are not Integer");
+        }
         return typeEnv;
     }
 

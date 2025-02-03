@@ -58,7 +58,11 @@ public class AcquireStmt implements IStmt {
     }
 
     public IADTDictionary<String, IType> typeCheck(IADTDictionary<String, IType> typeEnv) throws TypeCheckException {
-        //todo
+        IType varType = typeEnv.lookup(this.var);
+
+        if (!(varType.equals(new IntType()))){
+            throw new TypeCheckException("Variable of Acquire is not Integer");
+        }
 
         return typeEnv;
     }
