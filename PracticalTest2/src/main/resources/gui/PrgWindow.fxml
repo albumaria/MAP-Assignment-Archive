@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="" prefHeight="878.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PrgWindowController">
+   <children>
+      <GridPane layoutX="65.0" layoutY="52.0" prefHeight="509.0" prefWidth="669.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.99997965494794" minWidth="10.0" prefWidth="290.99997965494794" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.3333740234375" minWidth="0.0" prefWidth="31.66668701171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.33333333333337" minWidth="10.0" prefWidth="129.33333333333331" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.33333333333337" minWidth="10.0" prefWidth="33.3333740234375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.3333943684896" minWidth="10.0" prefWidth="135.99995930989587" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.3333943684896" minWidth="10.0" prefWidth="25.33329264322913" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0000203450521" minWidth="10.0" prefWidth="424.66670735677087" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="175.0" minHeight="0.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="175.0" minHeight="7.999997456868492" prefHeight="25.999994913736984" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="433.0" minHeight="10.0" prefHeight="319.6666717529297" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="433.0" minHeight="10.0" prefHeight="30.00001017252606" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="567.6666666666667" minHeight="10.0" prefHeight="392.6666564941406" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="412.3333740234375" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="33.66664632161462" minHeight="10.0" prefHeight="33.66664632161462" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="heapTableView" prefHeight="359.0" prefWidth="408.0" GridPane.rowIndex="3">
+              <columns>
+                <TableColumn prefWidth="84.00002765655518" text="Address" />
+                <TableColumn prefWidth="80.00000762939453" text="Value" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TableView fx:id="symTableTableView" prefHeight="305.0" prefWidth="218.0" GridPane.rowIndex="5">
+              <columns>
+                <TableColumn prefWidth="102.66661071777344" text="Variable Name" />
+                <TableColumn prefWidth="94.66668701171875" text="Value" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <ListView fx:id="fileTableListView" prefHeight="191.0" prefWidth="306.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+            <ListView fx:id="prgStateIdListView" onMouseClicked="#idClickedHandler" prefHeight="175.0" prefWidth="239.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ListView fx:id="outListView" prefHeight="257.0" prefWidth="179.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ListView fx:id="exeStackListView" prefHeight="644.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" GridPane.rowSpan="3" />
+            <Button fx:id="oneStepButton" mnemonicParsing="false" onAction="#oneStepButtonHandler" prefHeight="28.0" prefWidth="1089.0" text="One Step" textAlignment="CENTER" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" />
+            <Label fx:id="nrPrgStates" alignment="CENTER" prefHeight="17.0" prefWidth="1087.0" text="Number of PrgStates: 0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="425.0" text="Heap" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="245.0" text="Output" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="201.0" text="PrgState Id List" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="435.0" text="Execution Stack" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="473.0" text="SymTable" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="489.0" text="File Table" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,5621 @@
+# 1
+ExeStack:
+Ref int v ; new(v, 20) ; Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int v
+new(v, 20) ; Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)    
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int v
+new(v, 20) ; Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)    
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(v, 20) ; Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)    
+SymTable:
+v -> (0, int)
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(v, 20) ; Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)    
+SymTable:
+v -> (0, int)
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(v, 20)
+Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)   
+SymTable:
+v -> (0, int)
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(v, 20)
+Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)   
+SymTable:
+v -> (0, int)
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)   
+SymTable:
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+Ref Ref int a ; new(a, v) ; Print(v) ; Print(a)   
+SymTable:
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+Ref Ref int a
+new(a, v) ; Print(v) ; Print(a)  
+SymTable:
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+Ref Ref int a
+new(a, v) ; Print(v) ; Print(a)  
+SymTable:
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+new(a, v) ; Print(v) ; Print(a)  
+SymTable:
+a -> (0, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+new(a, v) ; Print(v) ; Print(a)  
+SymTable:
+a -> (0, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+new(a, v)
+Print(v) ; Print(a) 
+SymTable:
+a -> (0, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+new(a, v)
+Print(v) ; Print(a) 
+SymTable:
+a -> (0, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+
+
+# 1
+ExeStack:
+Print(v) ; Print(a) 
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+Print(v) ; Print(a) 
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+Print(v)
+Print(a)
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+Print(v)
+Print(a)
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+Print(a)
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+Print(a)
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+(1, int)
+(2, Ref int)
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+(1, int)
+(2, Ref int)
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (2, Ref int)
+v -> (1, int)
+Out:
+(1, int)
+(2, Ref int)
+FileTable:
+Heap:
+1 -> 20
+2 -> (1, int)
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; v = 20 ; Print(v)  
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+v = 20 ; Print(v) 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 20 ; Print(v) 
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 20
+Print(v)
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Print(v)
+SymTable:
+v -> 20
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+SymTable:
+v -> 20
+Out:
+20
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+SymTable:
+v -> 20
+Out:
+20
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( int a ; a = 20  ) ; int b ; b = 35  
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( int a ; a = 20  )
+int b ; b = 35 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int b ; b = 35 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+int a ; a = 20 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int b
+b = 35
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+int a
+a = 20
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+b = 35
+SymTable:
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+a = 20
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+SymTable:
+b -> 35
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+SymTable:
+a -> 20
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( int a ; a = 20  ) ; int b ; b = 35  
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( int a ; a = 20  )
+int b ; b = 35 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int b ; b = 35 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+int a ; a = 20 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int b
+b = 35
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+int a
+a = 20
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+b = 35
+SymTable:
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+a = 20
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+SymTable:
+b -> 35
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+SymTable:
+a -> 20
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+SymTable:
+b -> 35
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+SymTable:
+a -> 20
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+SymTable:
+b -> 35
+Out:
+FileTable:
+Heap:
+
+
+# 2
+ExeStack:
+SymTable:
+a -> 20
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 4
+ExeStack:
+fork( int a ; a = 20  ) ; int b ; b = 35  
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 4
+ExeStack:
+fork( int a ; a = 20  )
+int b ; b = 35 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 4
+ExeStack:
+int b ; b = 35 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 5
+ExeStack:
+int a ; a = 20 
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 4
+ExeStack:
+int b
+b = 35
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 5
+ExeStack:
+int a
+a = 20
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 4
+ExeStack:
+b = 35
+SymTable:
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 5
+ExeStack:
+a = 20
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 4
+ExeStack:
+SymTable:
+b -> 35
+Out:
+FileTable:
+Heap:
+
+
+# 5
+ExeStack:
+SymTable:
+a -> 20
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int v ; Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int v
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a ; v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))     
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Ref int a
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10 ; new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))    
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+v = 10
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22) ; fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+new(a, 22)
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (0, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    ) ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+fork( wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))    )
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30) ; v = 32 ; Print(v) ; Print(rH(a))   
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 2
+ExeStack:
+wH(a, 30)
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+FileTable:
+Heap:
+1 -> 22
+
+
+# 1
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32 ; Print(v) ; Print(rH(a))  
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+v = 32
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v) ; Print(rH(a)) 
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(v)
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+Print(rH(a))
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 10
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 2
+ExeStack:
+SymTable:
+a -> (1, int)
+v -> 32
+Out:
+10
+30
+32
+30
+FileTable:
+Heap:
+1 -> 30
+
+
+# 1
+ExeStack:
+int a ; int b ; int c ; a = 1 ; b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)       
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int a
+int b ; int c ; a = 1 ; b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)      
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int b ; int c ; a = 1 ; b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)      
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int b
+int c ; a = 1 ; b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)     
+SymTable:
+a -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int c ; a = 1 ; b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)     
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+int c
+a = 1 ; b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)    
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+a = 1 ; b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)    
+SymTable:
+a -> 0
+b -> 0
+c -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+a = 1
+b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)   
+SymTable:
+a -> 0
+b -> 0
+c -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+b = 2 ; c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)   
+SymTable:
+a -> 1
+b -> 0
+c -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+b = 2
+c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)  
+SymTable:
+a -> 1
+b -> 0
+c -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+c = 5 ; switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300)  
+SymTable:
+a -> 1
+b -> 2
+c -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+c = 5
+switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300) 
+SymTable:
+a -> 1
+b -> 2
+c -> 0
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300)) ; Print(300) 
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+switch(a * 10) (case b * c: Print(a) ; Print(b) ) (case 10: Print(100) ; Print(200) ) (default: Print(300))
+Print(300)
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+if (a * 10 == b * c) { then Print(a) ; Print(b)  else if (a * 10 == 10) { then Print(100) ; Print(200)  else Print(300) } }
+Print(300)
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Print(a) ; Print(b) 
+Print(300)
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Print(a)
+Print(b)
+Print(300)
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Print(b)
+Print(300)
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+1
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+Print(300)
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+1
+2
+FileTable:
+Heap:
+
+
+# 1
+ExeStack:
+SymTable:
+a -> 1
+b -> 2
+c -> 5
+Out:
+1
+2
+300
+FileTable:
+Heap:
+
+
